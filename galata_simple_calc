@@ -1,0 +1,21 @@
+print("Choosing zero as operator symbol will stop the program!")
+while True:
+    x = float(input("Enter x: "))
+    y = float(input("Enter y: "))
+    operator = input("Enter operator (+, -, *, /): ")
+    if operator == '0':
+        break
+    if operator in ('+', '-', '*', '/'):
+        if operator == '+':
+            print("%.2f" % (x + y))
+        elif operator == '-':
+            print("%.2f" % (x - y))
+        elif operator == '*':
+            print("%.2f" % (x * y))
+        elif operator == '/':
+            if y != 0:
+                print("%.2f" % (x / y))
+            else:
+                print("Dividing by zero is undefined!")
+    else:
+        print("Wrong operator symbol!")
