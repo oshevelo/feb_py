@@ -7,7 +7,7 @@ it is also possible to use main constants from the math module
 '''
 
 const = {'pi': pi, 'e': e}
-operationList = ['+','-','*','/']
+operationList = ['+','-','*','**','/']
 
 
 def switch():
@@ -104,9 +104,16 @@ def linkFunction(num1, num2, mathOperation):
 	elif mathOperation == '*':
 		result = num1 * num2
 		return result
-	elif mathOperation == '/':
-		result = num1 / num2
+	elif mathOperation == '**':
+		result = num1 ** num2
 		return result
+	elif mathOperation == '/':
+		try:
+			result = num1 / num2
+		except ZeroDivisionError:
+			print('Division by zero!')
+		else:
+			return result
 		
 		
 if __name__ == '__main__':
