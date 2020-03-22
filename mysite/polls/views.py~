@@ -1,0 +1,9 @@
+from django.http import HttpResponse
+
+
+def index(request):
+    print(request)
+    print(dir(request))
+    print(request.META)
+    1/0
+    return HttpResponse("Hello,sdfsdfsdfsdfsd world. You're at the polls index.")
